@@ -9,7 +9,9 @@
 <!--    if we use scope as prototype the object is created multiple time how many times you create-->
     <bean id="alien" class="org.example.Alien" scope="prototype">
         <property name="age" value="22"/>
+        <property name="lap" ref="lap1"/>
     </bean>
-<!--    <bean id="lap" class="org.example.Laptop"/>-->
+
+    <bean id="lap1" class="org.example.Laptop"/>
 
 </beans>
