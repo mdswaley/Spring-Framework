@@ -13,13 +13,11 @@ public class App
     {
         ApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
         Alien obj = (Alien) context.getBean("alien");
+        System.out.println(obj.getAge());
         obj.code();
 
-        Alien obj2 = (Alien) context.getBean("alien");
-        obj2.code();
-
-        Laptop obj3 = (Laptop) context.getBean("lap");
-        System.out.println(obj3.age = 33);
+//        Laptop obj3 = (Laptop) context.getBean("lap");
+//        System.out.println(obj3.age = 33);
 
     }
 }

@@ -7,7 +7,9 @@
     <!-- bean definitions here -->
 <!--    if we use scope as singleton the object is created only once-->
 <!--    if we use scope as prototype the object is created multiple time how many times you create-->
-    <bean id="alien" class="org.example.Alien" scope="prototype"/>
-    <bean id="lap" class="org.example.Laptop"/>
+    <bean id="alien" class="org.example.Alien" scope="prototype">
+        <property name="age" value="22"/>
+    </bean>
+<!--    <bean id="lap" class="org.example.Laptop"/>-->
 
 </beans>
