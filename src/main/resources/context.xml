@@ -4,12 +4,25 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- bean definitions here -->
-<!--    if we use scope as singleton the object is created only once-->
-<!--    if we use scope as prototype the object is created multiple time how many times you create-->
     <bean id="alien" class="org.example.Alien" scope="prototype">
-        <property name="age" value="22"/>
-        <property name="lap" ref="lap1"/>
+<!--        <property name="age" value="22"/>-->
+<!--        <property name="lap" ref="lap1"/>-->
+
+<!--        constructor injection-->
+<!--        default it go for sequence-wise-->
+
+<!--        first approach-->
+        <constructor-arg index="0" value="22"/>
+        <constructor-arg index="1" ref="lap1"/>
+
+<!--        second approach-->
+<!--        <constructor-arg type="org.example.Laptop" ref="lap1"/>-->
+<!--        <constructor-arg type="int" value="22"/>-->
+
+<!--        third approach-->
+<!--        <constructor-arg name="lap" ref="lap1"/>-->
+<!--        <constructor-arg name="age" value="22"/>-->
+
     </bean>
 
     <bean id="lap1" class="org.example.Laptop"/>

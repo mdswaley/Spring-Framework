@@ -1,11 +1,20 @@
 package org.example;
 
+import java.beans.ConstructorProperties;
+
 public class Alien {
     private int age;
     private Laptop lap;
 
     public Alien() {
         System.out.println("Alien Obj created");
+    }
+
+//    constructor injection
+//    @ConstructorProperties({"age","lap"}) // if you are using name property int xml file for initializing.
+    public Alien(int age, Laptop lap) {
+        this.age = age;
+        this.lap = lap;
     }
 
     public int getAge() {
