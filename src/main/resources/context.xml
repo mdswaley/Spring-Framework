@@ -28,6 +28,6 @@
     <bean id="com" class="org.example.Laptop" />
 
 <!--    using lazy-init we can stop unwanted object creation . like whenever you use that obj at that time call -->
-    <bean id="com2" class="org.example.Desktop" lazy-init="true"/>
+    <bean class="org.example.Desktop" lazy-init="true"/>
 
 </beans>

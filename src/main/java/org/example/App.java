@@ -17,6 +17,8 @@ public class App
         System.out.println(obj.getAge());
         obj.code();
 
+        Desktop obj2 = context.getBean(Desktop.class); // we can mention class as will in getBean method. so that no need of id in xml.
+
 
     }
 }
