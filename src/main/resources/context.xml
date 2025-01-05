@@ -6,7 +6,9 @@
 
     <bean id="alien" class="org.example.Alien" autowire="byName">
         <property name="age" value="22"/>
-<!--        <property name="com" ref="com2"/>-->
+        <property name="com" >
+            <bean class="org.example.Laptop" />
+        </property>
 
 <!--        constructor injection-->
 <!--        default it go for sequence-wise-->
@@ -25,7 +27,7 @@
 
     </bean>
 <!-- if you have two choice .So you can make one as primary . which run in case you are not explicitly mention in property-->
-    <bean id="com" class="org.example.Laptop" />
+<!--    <bean id="com" class="org.example.Laptop" />-->
 
 <!--    using lazy-init we can stop unwanted object creation . like whenever you use that obj at that time call -->
     <bean class="org.example.Desktop" lazy-init="true"/>
