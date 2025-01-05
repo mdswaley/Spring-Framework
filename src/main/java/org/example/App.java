@@ -15,7 +15,7 @@ public class App
     {
 //       ---------------JAVA BASED CONFIGURATION------------
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        Desktop obj = context.getBean(Desktop.class);
+        Desktop obj = context.getBean("jarvis",Desktop.class);
         obj.compile();
 
 
