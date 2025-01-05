@@ -17,6 +17,8 @@ public class App
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         Desktop obj = context.getBean("jarvis",Desktop.class);
         obj.compile();
+        Desktop obj2 = context.getBean("jarvis",Desktop.class);
+        obj2.compile();
 
 
 
