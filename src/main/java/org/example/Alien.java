@@ -1,8 +1,15 @@
 package org.example;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component //stereotype annotation which is allowed spring to create object of that class basically manage.
 public class Alien {
     private int age;
+
+    @Autowired
+//    @Qualifier("desktop")
     private Computer com;
 
     public Alien() {
