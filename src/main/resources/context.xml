@@ -29,7 +29,7 @@
 <!-- if you have two choice .So you can make one as primary . which run in case you are not explicitly mention in property-->
 <!--    <bean id="com" class="org.example.Laptop" />-->
 
-<!--    using lazy-init we can stop unwanted object creation . like whenever you use that obj at that time call -->
+<!--    using lazy-init we can stop unwanted object creation . like whenever you use that obj at that time create and use -->
     <bean class="org.example.Desktop" lazy-init="true"/>
 
 </beans>
