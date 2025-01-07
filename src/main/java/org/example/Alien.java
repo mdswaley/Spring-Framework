@@ -10,18 +10,10 @@ public class Alien {
 
     @Value("23") // we are inject the value not hard code it (like age = 23).
     private int age;
-
-    @Autowired
-//    @Qualifier("desktop")
     private Computer com;
 
     public Alien() {
         System.out.println("Alien Obj created");
-    }
-
-    public Alien(int age, Computer com) {
-        this.age = age;
-        this.com = com;
     }
 
     public int getAge() {
@@ -29,7 +21,6 @@ public class Alien {
     }
 
     public void setAge(int age) {
-//        System.out.println("Setter is called...");
         this.age = age;
     }
 
@@ -37,6 +28,8 @@ public class Alien {
         return com;
     }
 
+    @Autowired // setter injection
+    @Qualifier("laptop")
     public void setCom(Computer com) {
         this.com = com;
     }
