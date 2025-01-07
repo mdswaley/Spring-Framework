@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Model;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;

@@ -1,10 +1,11 @@
 package org.example;
 
-import org.example.Config.AppConfig;
+import org.example.Model.Alien;
+import org.example.Model.Laptop;
+import org.example.Service.LaptopService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
  * Hello world!
@@ -18,9 +19,13 @@ public class App
 //        -------------------WELCOME TO SPRING BOOT----------------
         ApplicationContext context = SpringApplication.run(App.class, args);
 
-        Alien obj = context.getBean(Alien.class);
-        obj.code();
-        System.out.println(obj.getAge());
+//        Alien obj = context.getBean(Alien.class);
+//        obj.code();
+//        System.out.println(obj.getAge());
+
+        LaptopService service = context.getBean(LaptopService.class);
+        Laptop lap = context.getBean(Laptop.class);
+        service.addLaptop(lap);
 
 
 //       ---------------JAVA BASED CONFIGURATION------------

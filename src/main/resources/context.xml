@@ -4,10 +4,10 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="alien" class="org.example.Alien" autowire="byName">
+    <bean id="alien" class="org.example.Model.Alien" autowire="byName">
         <property name="age" value="22"/>
         <property name="com" >
-            <bean class="org.example.Laptop" />
+            <bean class="org.example.Model.Laptop" />
         </property>
 
 <!--        constructor injection-->
@@ -18,7 +18,7 @@
 <!--        <constructor-arg index="1" ref="desk"/>-->
 
 <!--        second approach-->
-<!--        <constructor-arg type="org.example.Laptop" ref="lap1"/>-->
+<!--        <constructor-arg type="org.example.Model.Laptop" ref="lap1"/>-->
 <!--        <constructor-arg type="int" value="22"/>-->
 
 <!--        third approach-->
@@ -27,9 +27,9 @@
 
     </bean>
 <!-- if you have two choice .So you can make one as primary . which run in case you are not explicitly mention in property-->
-<!--    <bean id="com" class="org.example.Laptop" />-->
+<!--    <bean id="com" class="org.example.Model.Laptop" />-->
 
 <!--    using lazy-init we can stop unwanted object creation . like whenever you use that obj at that time create and use -->
-    <bean class="org.example.Desktop" lazy-init="true"/>
+    <bean class="org.example.Model.Desktop" lazy-init="true"/>
 
 </beans>

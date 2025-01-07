@@ -1,13 +1,7 @@
 package org.example.Config;
 
-import org.example.Alien;
-import org.example.Computer;
-import org.example.Desktop;
-import org.example.Laptop;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 
 @Configuration
 @ComponentScan("org.example")
