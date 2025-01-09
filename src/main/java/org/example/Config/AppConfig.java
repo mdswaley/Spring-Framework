@@ -1,11 +1,16 @@
 package org.example.Config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import javax.sql.DataSource;
 
 @Configuration
 @ComponentScan("org.example")
 public class AppConfig {
+
 
 //    @Bean
 //    public Alien getAlien(Computer com){ // @Qualifier("getLaptop")
