@@ -1,12 +1,14 @@
 package org.example.Model;
 
+import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
 @Primary
-@Scope("prototype")
+//@Scope("prototype")
+@Lazy
 public class Desktop implements Computer{
     public Desktop(){
         System.out.println("Desktop obj created...");

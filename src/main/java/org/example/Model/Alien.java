@@ -31,7 +31,7 @@ public class Alien {
     }
 
     @Autowired // setter injection
-    @Qualifier("laptop")
+    @Qualifier("desktop")
     public void setCom(Computer com) {
         this.com = com;
     }
